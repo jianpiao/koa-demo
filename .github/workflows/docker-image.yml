@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: smallzip7799/Publish-Docker-Github-Action@master
         with:
-          name: ispeakcode/docker-githubaction
+          name: smallzip/docker-githubaction
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
