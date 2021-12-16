@@ -15,6 +15,6 @@ jobs:
       - name: Build the Docker image
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: smallzip7799/docker-githubaction
+          name: smallzip7799/koa-github-action
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
