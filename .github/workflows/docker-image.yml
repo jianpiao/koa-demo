@@ -29,5 +29,4 @@ jobs:
           port: 22
           script: |
             docker pull smallzip7799/koa-github-action 
-            && 
             docker run -d -p 8888:3010 --name koa-docker smallzip7799/koa-github-action
