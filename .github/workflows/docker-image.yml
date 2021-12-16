@@ -20,9 +20,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       # 部署服务器
-      - name: Run SSH command
-        uses: garygrossgarten/github-action-ssh@v0.6.3
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
         with:
-          command: docker pull smallzip7799/koa-github-action && docker run -d -p 8888:3010 --name koa-docker docker pull smallzip7799/koa-github-action
           host: ${{ secrets.HOST }}
-          passphrase: ${{ secrets.PASSPHRASE }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: ls -a
