@@ -32,3 +32,15 @@ jobs:
             docker container stop koa-docker  
             docker container rm koa-docker 
             docker run -d -p 8888:3010 --name koa-docker smallzip7799/koa-github-action
+
+      # 发送钉钉消息
+      - name: dingtalk robot message
+        uses: fifsky/dingtalk-action@master
+        with:
+        url: ${{ secrets.DINGTALK_WEBHOOK}}
+        type: markdown
+        content: |
+          # Tips
+          ## Hello
+          > from github action message
+          > ^_^
