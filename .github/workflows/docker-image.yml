@@ -39,4 +39,6 @@ jobs:
         with:
           url: ${{ secrets.DINGTALK_WEBHOOK}}
           type: markdown
-          content: "监控提示：构建成功了"
+          content: |
+            ## 监控提示：
+              构建成功了
