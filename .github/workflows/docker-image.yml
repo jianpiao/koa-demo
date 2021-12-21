@@ -34,7 +34,6 @@ jobs:
               echo "docker exist"
               docker container stop koa-docker
               docker container rm koa-docker
-              docker images remove smallzip7799/koa-github-action
             else
               echo "docker don't exist"
             fi
