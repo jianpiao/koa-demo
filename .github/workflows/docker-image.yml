@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          script: sh docker.sh
+          script: docker.sh
 
       # 发送钉钉消息
       - name: dingtalk robot message
