@@ -29,14 +29,7 @@ jobs:
           port: 22
           script: sh ./docker.sh
 
-      # 转存上下文
-      - name: dump github context
-          env:
-            GITHUB_CONTEXT: ${{ toJson(github) }}         
-          run: echo "$GITHUB_CONTEXT"
-
-    
-          # 发送钉钉消息
+      # 发送钉钉消息
       - name: dingtalk robot message
         uses: fifsky/dingtalk-action@master
         with:
