@@ -11,8 +11,6 @@ if [ $? == 0 ] ;then
     docker container stop $containerName
     # 移除容器
     docker container rm $containerName
-    # 移除镜像
-    docker images remove "${imageName}"
 else
     echo "docker don't exist"
 fi
